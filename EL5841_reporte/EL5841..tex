@@ -1,0 +1,101 @@
+\documentclass[12pt,letterpaper]{article}
+
+\RequirePackage{xcolor}
+\definecolor{tecAzul}{cmyk}{1,0.91,0.33,0.25} % según manual de imagen 2016
+\definecolor{tecRojo}{cmyk}{0,0.9,0.86,0}     % según manual de imagen 2016
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[spanish]{babel}
+
+\usepackage{titlesec}
+\titleformat*{\section}%
+{\normalfont\Large\bfseries\color{tecAzul}}
+\titleformat*{\subsection}%
+{\normalfont\large\bfseries\color{tecAzul}}
+
+
+\usepackage[tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm]{geometry}
+\usepackage{textpos}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgf}
+
+\newcommand{\EstudianteA}{MANUEL ARIAS ABURTO}
+\newcommand{\EstudianteB}{SUSANA ASTORGA RODRIGUIEZ}
+\newcommand{\EstudianteC}{JOSE ANGULO DURAN}
+\newcommand{\EstudianteD}{GERARDO ARAYA FALLAS}
+
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+	
+\graphicspath{{./}{./fig/}}
+
+%-------------------------- Title section -------------------------------------%
+
+% kit logo
+\begin{textblock}{10}[0,0](-0.5,0)
+	\begin{flushleft}
+		\large 
+		Escuela de Ingeniería Electrónica \\
+		Licenciatura en Ingeniería Electrónica \\
+		EL5841 Taller de Sistemas Embebidos \\
+		II Semestre 2021
+	\end{flushleft}
+\end{textblock}
+
+%Institute and Chair
+\begin{textblock}{10}[0,0](2.9,-0.35)
+	\begin{flushright}
+		\includegraphics[scale=0.8]{Firma_TEC-4.pdf}
+	\end{flushright}
+\end{textblock}
+
+%% Title %%
+\begin{center}
+	\vspace{3.5cm}
+	{\Large\color{tecRojo} Reporte de Proyecto }
+	\par\vspace{1.0cm}
+	{\LARGE\bf\color{tecAzul}{Proyecto 1: Diseño de sistemas usando High-Level
+Synthesis
+}}
+	\par\vspace{1.0cm}
+	{\large{\EstudianteA, \EstudianteB, \EstudianteC, \EstudianteD} 
+	\vspace{0.75cm}}
+\end{center}
+
+%------------------------------------------------------------------------------%
+
+
+\begin{abstract}
+Resumen sobre el contenido del reporte y el trabajo realizado como parte del 
+proyecto.
+\end{abstract}
+
+
+\section{Sección 1}
+Ejemplo de una referencia \cite{legup}.
+
+
+\section{Sección 2}
+
+
+\section{Conclusiones}
+Resumir acá los hallazgos y resultados producto de la experimentación.
+
+
+% References
+\begin{thebibliography}{99}
+
+\bibitem{legup}
+Andrew Canis, Jongsok Choi, Mark Aldham, Victor Zhang, Ahmed Kammoona, Jason H. 
+Anderson, Stephen Brown, and Tomasz Czajkowski. 2011. \textit{LegUp: high-level 
+synthesis for FPGA-based processor/accelerator systems}. In Proceedings of the 
+19th ACM/SIGDA international symposium on Field programmable gate arrays (FPGA 
+'11). ACM, New York, NY, USA, 33-36. 
+
+\end{thebibliography}
+
+
+\end{document}
